@@ -1,0 +1,14 @@
+:root {
+  --verde_escuro: #65A754;
+  --verde_claro: #ADDEA0;
+  --cinza: #6B6B6B;
+  --fundo: #EBEBEB;
+  --verde_config: #88AE88;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}	
+
