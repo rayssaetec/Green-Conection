@@ -12,3 +12,6 @@
   box-sizing: border-box;
 }	
 
+body {
+  background: var(--fundo);
+}
