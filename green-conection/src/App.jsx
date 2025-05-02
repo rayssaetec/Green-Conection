@@ -1,4 +1,4 @@
-import { Inicial } from './componentes'
+import { Inicial } from './componentes/Inicial'
 
 import './App.css'
 
