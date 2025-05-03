@@ -1,5 +1,5 @@
-import style from "./sobre.module.css";
-import { Cabecalho } from "../cabecalho";
+
+import { Cabecalho } from "../componentes/cabecalho";
 
 const Sobre = () => {
     return (
