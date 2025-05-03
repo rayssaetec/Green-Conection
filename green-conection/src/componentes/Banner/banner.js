@@ -1,1 +1,1 @@
-export * from './banner.jsx'
+export * from './banner'
