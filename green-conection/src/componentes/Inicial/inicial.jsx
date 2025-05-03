@@ -2,6 +2,7 @@ import style from "./inicial.module.css";
 
 import { Cabecalho } from "../cabecalho";
 import { Botao } from "../botao";
+import { Banner } from "../Banner";
 
 const Inicial = () => {
   const scrollToSection = (sectionId) => {
@@ -21,7 +22,7 @@ const Inicial = () => {
       </section>
 
       <section id="SaibaMais" className={style.Section}>
-        <div>Saiba Mais</div>
+        <Banner />
       </section>
     </>
   );
