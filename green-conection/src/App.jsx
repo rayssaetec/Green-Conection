@@ -4,7 +4,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <Inicial />
     </div>
   )

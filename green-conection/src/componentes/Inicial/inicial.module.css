@@ -1,0 +1,32 @@
+.SectionHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+  
+  .Section {
+    padding: 80px 20px;
+    width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    max-height: 400px;
+  }
+  
