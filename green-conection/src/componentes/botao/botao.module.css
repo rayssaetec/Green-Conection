@@ -13,4 +13,8 @@
     cursor: pointer;
     border-radius: 12px;
   }
+
+  .Botao:hover {
+    background-color: var(--verde_escuro);
+  }
  

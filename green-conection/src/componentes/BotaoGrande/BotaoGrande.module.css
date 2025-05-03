@@ -1,13 +1,15 @@
 .BotaoGrande {
     background-color: var(--verde_claro);
-    color: white;
+    color: black;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
+    font-weight: bolder;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 200px; 
+    width: 300px; 
+    height: 100px;
     margin: 10px;
     text-align: center;
   }

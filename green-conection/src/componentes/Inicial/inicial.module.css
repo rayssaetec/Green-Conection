@@ -6,6 +6,13 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
+  padding-bottom: 40px;
+}
+
+.SectionHome .Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Section {
@@ -14,16 +21,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 40px; 
 }
+
 
 .BotoesContainer {
   display: flex;
   justify-content: center;
-  margin-top: 40px;  /* Aumentando o espaçamento entre o banner e os botões */
+  margin-top: 40px;
 }
 
 .BotoesContainer button {
-  margin: 0 15px;  /* Aumentando o espaçamento entre os botões */
+  margin: 0 15px;
 }
 
 .Img {
