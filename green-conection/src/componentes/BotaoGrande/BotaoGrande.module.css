@@ -1,0 +1,18 @@
+.BotaoGrande {
+    background-color: var(--verde_claro);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; 
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .BotaoGrande:hover {
+    background-color: var(--verde_escuro);
+  }
+  

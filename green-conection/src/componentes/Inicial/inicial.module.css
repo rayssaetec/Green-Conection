@@ -1,32 +1,34 @@
 .SectionHome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-  }
-  
-  .Section {
-    padding: 80px 20px;
-    width: 100vw;
-    min-height: 100vh;
-    text-align: center;
-  }
-  
-  
-  .Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .Img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    max-height: 400px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.Section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BotoesContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;  /* Aumentando o espaçamento entre o banner e os botões */
+}
+
+.BotoesContainer button {
+  margin: 0 15px;  /* Aumentando o espaçamento entre os botões */
+}
+
+.Img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  max-height: 400px;
+}

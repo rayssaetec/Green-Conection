@@ -22,7 +22,11 @@ const Inicial = () => {
       </section>
 
       <section id="SaibaMais" className={style.Section}>
-        <Banner />
+        <Banner/>
+        <div className={style.BotoesContainer}>
+          <Botao texto="Saiba Mais" to="/saiba-mais" />
+          <BotaoGrande texto="Produtos" to="/produtos" />
+        </div>
       </section>
     </>
   );
