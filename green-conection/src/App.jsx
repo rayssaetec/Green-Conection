@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Inicial } from './componentes/Inicial'
 import Produtos from './pages/Produtos'
-import Sobre from './componentes/Sobre'
+import { Sobre}  from './pages/Sobre'
 
 import './App.css'
 
