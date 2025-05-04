@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Cabecalho } from "../componentes/cabecalho";
 
 const produtos = [
   {
+    id: 1,
     nome: "Alface Crespa",
     preco: "R$ 6,50 /kg",
     local: "Fazenda Pereira",
@@ -10,6 +12,7 @@ const produtos = [
     imagem: "/images/produtos/alface-crespa.jpg",
   },
   {
+    id: 2,
     nome: "Tomate",
     preco: "R$ 8,00 /kg",
     local: "Fazenda São José",
@@ -17,6 +20,7 @@ const produtos = [
     imagem: "/images/produtos/tomate.jpg",
   },
   {
+    id: 3,
     nome: "Cenoura",
     preco: "R$ 4,80 /kg",
     local: "Sítio Verde",
@@ -24,6 +28,7 @@ const produtos = [
     imagem: "/images/produtos/cenoura.jpg",
   },
   {
+    id: 4,
     nome: "Repolho Roxo",
     preco: "R$ 7,00 /kg",
     local: "Fazenda Nova",
@@ -90,15 +95,21 @@ export default function Produtos() {
                   />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title fw-semibold">{p.nome}</h5>
-                  <p className="card-text fw-bold">{p.preco}</p>
-                  <p className="small mb-1 text-white">{p.local}</p>
-                  <p className="small text-white">{p.cidade}</p>
+                  <h3 className="card-title fw-semibold">{p.nome}</h3>
+                  <p className="card-text fw-bold fs-5">{p.preco}</p>
+                  <p className="small mb-1 text-white fs-5">{p.local}</p>
+                  <p className="small mb-1 text-white fs-5">
+                    {p.data_producao}
+                  </p>
+                  <p className="small text-white fs-6">{p.cidade}</p>
                 </div>
                 <div className="card-footer text-center bg-transparent border-0">
-                  <button className="btn btn-outline-light w-100">
+                  <Link
+                    to={`/produto/${p.id}`}
+                    className="btn btn-outline-light w-100"
+                  >
                     Saiba Mais
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
