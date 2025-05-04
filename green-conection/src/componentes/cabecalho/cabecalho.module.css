@@ -10,33 +10,112 @@
   gap: 5px;
 }
 
-  
-  .logo {
-    height: 65px;
-    width: 75px;
-    border-radius: 50%;
-  }
-  
-  .link {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: larger;
-    font-weight: bolder;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .search {
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-width: 300px;
-    flex-grow: 1;
-  }
-  
-  .perfil {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
+.logo {
+  height: 65px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: larger;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 300px;
+  flex-grow: 1;
+}
+
+.perfil {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.perfil:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.menuLateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #a3cfa0;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.menuLateral.ativo {
+  transform: translateX(0);
+}
+
+.menuLateral h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 20px 0;
+}
+
+.menuLateral button:not(.btnFechar) {
+  width: 80%;
+  margin: 10px 0;
+  padding: 12px;
+  background-color: #bdf4a6;
+  border: 2px solid #2e6b26;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menuLateral button:hover {
+  background-color: #a3dfa0;
+  transform: scale(1.03);
+}
+
+.menuLateral img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.btnFechar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent !important; 
+  border: none !important;                
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.btnFechar:hover {
+  opacity: 0.6;
+}
+
