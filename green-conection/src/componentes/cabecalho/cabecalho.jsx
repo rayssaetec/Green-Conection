@@ -25,9 +25,9 @@ const Cabecalho = () => {
           placeholder="Pesquisar..."
           className={style.search}
         />
-        <a href="#" className={style.link}>
-          Contatar um produtor
-        </a>
+        <Link to="/contatar-produtor" className={style.link}>
+          Contate um produtor
+        </Link>
         <img
           src="/images/icones/perfil.png"
           alt="Perfil"
