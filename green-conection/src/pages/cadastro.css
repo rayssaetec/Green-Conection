@@ -1,0 +1,59 @@
+.cadastro-container {
+    background-color: #f1f1f1;
+    height: 100vh;
+    padding: 30px;
+    font-family: monospace;
+    position: relative;
+}
+
+.voltar {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.form-box {
+    background-color: #7eaf7c;
+    padding: 30px;
+    max-width: 550px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.form-box input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 6px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.btn-cadastrar {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #bdf4a6;
+    border: 1px solid green;
+    border-radius: 6px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.erro {
+    color: #550000;
+    font-size: 13px;
+    margin: -8px 0 10px;
+    text-align: left;
+  }
+  

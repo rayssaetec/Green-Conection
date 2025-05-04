@@ -1,16 +1,18 @@
-import { Routes, Route } from 'react-router-dom'
-import { Inicial } from './componentes/Inicial'
-import Produtos from './pages/Produtos'
-import Produto from './pages/Produto' 
-import { Sobre } from './pages/Sobre'
-import { ContatarProdutor } from './pages/ContatarProdutor'
-import { Produtores } from './pages/Produtores'
+import { Routes, Route } from "react-router-dom";
+import { Inicial } from "./componentes/Inicial";
+import Produtos from "./pages/Produtos";
+import Produto from "./pages/Produto";
+import { Sobre } from "./pages/Sobre";
+import { ContatarProdutor } from "./pages/ContatarProdutor";
+import { Produtores } from "./pages/Produtores";
+import CadastroCliente from './pages/CadastroCliente';
+import CadastroProdutor from './pages/CadastroProdutor';
 
-import './App.css'
+import "./App.css";
 
 const App = () => {
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
       <Routes>
         <Route path="/" element={<Inicial />} />
         <Route path="/produtos" element={<Produtos />} />
@@ -18,9 +20,11 @@ const App = () => {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contatar-produtor" element={<ContatarProdutor />} />
         <Route path="/produtores" element={<Produtores />} />
+        <Route path="/cadastro-cliente" element={<CadastroCliente />} />
+        <Route path="/cadastro-produtor" element={<CadastroProdutor />} />
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export { App }
+export { App };

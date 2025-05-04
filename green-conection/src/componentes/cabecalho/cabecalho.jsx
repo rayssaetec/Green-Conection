@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./cabecalho.module.css";
 
 const Cabecalho = () => {
   const [menuAberto, setMenuAberto] = useState(false);
+  const navigate = useNavigate();
 
-  const alternarMenu = () => {
-    setMenuAberto(!menuAberto);
+  const alternarMenu = () => setMenuAberto(!menuAberto);
+
+  const irParaCadastro = (rota) => {
+    setMenuAberto(false);
+    navigate(rota);
   };
 
   return (
@@ -37,13 +41,16 @@ const Cabecalho = () => {
       </header>
 
       <div className={`${style.menuLateral} ${menuAberto ? style.ativo : ""}`}>
-        <button className={style.btnFechar} onClick={alternarMenu}>
-          ×
-        </button>
+        <button className={style.btnFechar} onClick={alternarMenu}>×</button>
         <img src="/images/icones/perfil.png" alt="Ícone grande" />
         <h2>Criar conta</h2>
-        <button>Como Cliente</button>
-        <button>Como Produtor</button>
+        
+        <button onClick={() => irParaCadastro("/cadastro-cliente")} className={style.botao}>
+          Como Cliente
+        </button>
+        <button onClick={() => irParaCadastro("/cadastro-produtor")} className={style.botao}>
+          Como Produtor
+        </button>
       </div>
     </>
   );
