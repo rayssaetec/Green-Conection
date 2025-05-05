@@ -1,6 +1,6 @@
 
 import React from 'react';
-import styles from './Rodape.module.css';
+import styles from './rodape.module.css';
 
 const Rodape = () => {
   return (
