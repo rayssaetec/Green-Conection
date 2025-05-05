@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-import "./cadastro.css"; // ou outro css onde estão os estilos acima
+import "./cadastro.css"; 
 
 const Confirmacao = () => {
   return (

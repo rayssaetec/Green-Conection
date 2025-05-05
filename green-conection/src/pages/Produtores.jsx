@@ -1,4 +1,4 @@
-import style from "./produtores.module.css";
+import style from "./Produtores.module.css";
 import { Rodape } from "../componentes/rodape";
 import { Cabecalho } from "../componentes/cabecalho";
 
