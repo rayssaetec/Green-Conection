@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Rodape } from "../componentes/rodape";
 import { Cabecalho } from "../componentes/cabecalho";
 
 const produtos = [
@@ -116,6 +117,7 @@ export default function Produtos() {
           ))}
         </div>
       </div>
+      <Rodape />
     </div>
   );
 }

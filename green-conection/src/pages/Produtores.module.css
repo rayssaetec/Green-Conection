@@ -1,3 +1,50 @@
-.Titulo{
-    
+.container {
+    padding: 40px;
+}
+
+.titulo {
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.produtor {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    gap: 30px;
+}
+
+.colunaImagens {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.colunaTexto {
+    flex: 2;
+    font-family: monospace;
+}
+
+.img {
+    max-width: 100%;
+    border: 2px solid #7bbd72;
+    border-radius: 6px;
+}
+
+.nome {
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.historia {
+    font-style: italic;
+    line-height: 1.6;
 }
