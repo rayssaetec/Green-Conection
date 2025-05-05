@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { Cabecalho } from "../componentes/cabecalho";
 import { useState } from "react";
+import { useUsuario } from "../context/UsuarioContext";
+import { useCarrinho } from "../context/CarrinhoContext";
 import React from "react";
 import "./produto.css";
 
@@ -12,7 +14,7 @@ const produtos = [
     unidade: "Kg",
     descricao: "Alface Crespa, colhida fresca sem agrotóxicos.",
     imagem: "/images/produtos/alface-crespa.jpg",
-    produtor: "Fazenda Pereira",
+    produtor: "Sítio Irmãos Neto",
     colheita: "01/04/25",
   },
   {
@@ -22,7 +24,7 @@ const produtos = [
     unidade: "Kg",
     descricao: "Tomate maduro e suculento, ideal para saladas.",
     imagem: "/images/produtos/tomate.jpg",
-    produtor: "Fazenda São José",
+    produtor: "Rancho Ganzarolli",
     colheita: "10/04/25",
   },
   {
@@ -32,7 +34,7 @@ const produtos = [
     unidade: "Kg",
     descricao: "Cenoura crocante e doce, perfeita para sucos.",
     imagem: "/images/produtos/cenoura.jpg",
-    produtor: "Sítio Verde",
+    produtor: "Sítio Irmãos Neto",
     colheita: "06/02/25",
   },
   {
@@ -42,7 +44,7 @@ const produtos = [
     unidade: "Kg",
     descricao: "Repolho roxo fresco, ideal para saladas e refogados.",
     imagem: "/images/produtos/repolho-roxo.jpg",
-    produtor: "Fazenda Nova",
+    produtor: "Rancho Ganzarolli",
     colheita: "24/02/25",
   },
 ];
@@ -51,19 +53,34 @@ const Produto = () => {
   const { id } = useParams();
   const produto = produtos.find((p) => p.id === id);
   const [quantidade, setQuantidade] = useState(1);
+  const { usuario } = useUsuario();
+  const { adicionarItem } = useCarrinho();
 
-  const aumentarQuantidade = () => {
-    setQuantidade(quantidade + 1);
-  };
+  const aumentarQuantidade = () => setQuantidade(quantidade + 1);
   const diminuirQuantidade = () => {
-    if (quantidade > 1) {
-      setQuantidade(quantidade - 1);
-    }
+    if (quantidade > 1) setQuantidade(quantidade - 1);
   };
 
-  if (!produto) {
-    return <div>Produto não encontrado</div>;
-  }
+  const adicionarAoCarrinho = () => {
+    if (!usuario) {
+      alert("Você precisa estar logado para adicionar ao carrinho.");
+      return;
+    }
+
+    adicionarItem({
+      id: produto.id,
+      nome: produto.nome,
+      preco: produto.preco,
+      quantidade,
+      imagem: produto.imagem, 
+      unidade: produto.unidade,
+      produtor: produto.produtor, 
+    });    
+
+    alert("Produto adicionado ao carrinho!");
+  };
+
+  if (!produto) return <div>Produto não encontrado</div>;
 
   return (
     <>
@@ -95,7 +112,9 @@ const Produto = () => {
                 </button>
               </div>
             </div>
-            <button className="btn-carrinho">Adicionar ao carrinho</button>
+            <button className="btn-carrinho" onClick={adicionarAoCarrinho}>
+              Adicionar ao carrinho
+            </button>
           </div>
         </div>
       </div>

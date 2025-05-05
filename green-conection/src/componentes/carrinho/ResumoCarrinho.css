@@ -1,0 +1,44 @@
+.resumo-carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 999;
+}
+
+.resumo-carrinho button {
+  background-color: white;
+  color: #4caf50;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.resumo-carrinho button:hover {
+  background-color: #e6ffe6;
+}
+
+.botao-carrinho {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #4caf50;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.botao-carrinho:hover {
+  background-color:  #e6ffe6;
+}

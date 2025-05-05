@@ -8,9 +8,10 @@ import { Produtores } from "./pages/Produtores";
 import CadastroCliente from "./pages/CadastroCliente";
 import CadastroProdutor from "./pages/CadastroProdutor";
 import CadastroSucesso from "./pages/CadastroSucesso";
-import LoginCliente from './pages/LoginCliente';
+import LoginCliente from "./pages/LoginCliente";
 import LoginProdutor from "./pages/LoginProdutor";
-
+import Carrinho from "./pages/Carrinho"; 
+import ResumoCarrinho from "./componentes/carrinho/ResumoCarrinho"; 
 import "./App.css";
 
 const App = () => {
@@ -28,7 +29,10 @@ const App = () => {
         <Route path="/cadastro-sucesso" element={<CadastroSucesso />} />
         <Route path="/login-cliente" element={<LoginCliente />} />
         <Route path="/login-produtor" element={<LoginProdutor />} />
+        <Route path="/carrinho" element={<Carrinho />} />
       </Routes>
+
+      <ResumoCarrinho /> {}
     </div>
   );
 };

@@ -1,31 +1,31 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUsuario } from "../../context/UsuarioContext";
+import { useCarrinho } from "../../context/CarrinhoContext";
 import style from "./cabecalho.module.css";
 
 const Cabecalho = () => {
   const [menuAberto, setMenuAberto] = useState(false);
   const navigate = useNavigate();
   const { usuario, sair } = useUsuario();
+  const { total, quantidadeTotal } = useCarrinho();
 
   const alternarMenu = () => setMenuAberto(!menuAberto);
+
   const irParaCadastro = (rota) => {
     setMenuAberto(false);
     navigate(rota);
   };
 
   const handleSair = () => {
+    sair();
+    setMenuAberto(false);
+
     if (usuario?.tipo === "cliente") {
-      sair();
-      setMenuAberto(false);
       navigate("/login-cliente");
     } else if (usuario?.tipo === "produtor") {
-      sair();
-      setMenuAberto(false);
       navigate("/login-produtor");
     } else {
-      sair();
-      setMenuAberto(false);
       navigate("/");
     }
   };
@@ -65,30 +65,13 @@ const Cabecalho = () => {
 
         {usuario ? (
           <div className={style.dadosUsuario}>
-            <p>
-              <strong>Nome:</strong> {usuario.nome}
-            </p>
-            {usuario.cpf && (
-              <p>
-                <strong>CPF:</strong> {usuario.cpf}
-              </p>
-            )}
-            {usuario.cnpj && (
-              <p>
-                <strong>CNPJ:</strong> {usuario.cnpj}
-              </p>
-            )}
-            <p>
-              <strong>Telefone:</strong> {usuario.telefone}
-            </p>
-            <p>
-              <strong>Email:</strong> {usuario.email}
-            </p>
+            <p><strong>Nome:</strong> {usuario.nome}</p>
+            {usuario.cpf && <p><strong>CPF:</strong> {usuario.cpf}</p>}
+            {usuario.cnpj && <p><strong>CNPJ:</strong> {usuario.cnpj}</p>}
+            <p><strong>Telefone:</strong> {usuario.telefone}</p>
+            <p><strong>Email:</strong> {usuario.email}</p>
 
-            {/* botão sem fundo */}
-            <button onClick={handleSair} className={style.sair}>
-              Sair
-            </button>
+            <button onClick={handleSair} className={style.sair}>Sair</button>
           </div>
         ) : (
           <>
@@ -108,6 +91,8 @@ const Cabecalho = () => {
           </>
         )}
       </div>
+
+      {}
     </>
   );
 };

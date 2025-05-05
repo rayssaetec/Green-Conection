@@ -1,0 +1,90 @@
+.container {
+  background-color: #eaf5e2;
+  padding: 40px;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+}
+
+.titulo {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.grupo {
+  margin-bottom: 30px;
+}
+
+.produtor {
+  font-size: 22px;
+  font-style: italic;
+  border-bottom: 2px solid #444;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #d2efbd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.nome {
+  flex: 1;
+  font-weight: bold;
+}
+
+.preco {
+  width: 100px;
+  text-align: right;
+}
+
+.qtd {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 2px solid #ccc;
+  font-weight: bold;
+}
+
+.totalLabel {
+  font-size: 18px;
+}
+
+.total {
+  font-size: 18px;
+  background-color: #8bbf69;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: white;
+}
+
+.pagar {
+  background-color: #b6f0b4;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
