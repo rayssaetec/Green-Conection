@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className={style.Banner}>
       <img
-        src="/images/elementos/Banner.jpeg"
+        src="/images/elementos/banner-temp.jpeg"
         alt="Banner"
         className={style.BannerImg}
       />
