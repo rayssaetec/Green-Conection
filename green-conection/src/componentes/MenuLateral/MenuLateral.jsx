@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./cabecalho.module.css";
+import style from "./MenuLateral.module.css";
 
 const MenuLateral = () => {
   const [menuAberto, setMenuAberto] = useState(false);

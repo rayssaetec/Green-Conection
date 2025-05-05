@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './Botao.module.css';
+import styles from './botao.module.css';
 
 const Botao = ({ texto, to, onClick }) => {
   const navigate = useNavigate();
