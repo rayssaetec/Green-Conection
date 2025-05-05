@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useUsuario } from "../../context/UsuarioContext";
 import style from "./cabecalho.module.css";
 
 const Cabecalho = () => {
   const [menuAberto, setMenuAberto] = useState(false);
   const navigate = useNavigate();
+  const { usuario } = useUsuario();
 
   const alternarMenu = () => setMenuAberto(!menuAberto);
 
@@ -41,16 +43,50 @@ const Cabecalho = () => {
       </header>
 
       <div className={`${style.menuLateral} ${menuAberto ? style.ativo : ""}`}>
-        <button className={style.btnFechar} onClick={alternarMenu}>×</button>
+        <button className={style.btnFechar} onClick={alternarMenu}>
+          ×
+        </button>
         <img src="/images/icones/perfil.png" alt="Ícone grande" />
-        <h2>Criar conta</h2>
-        
-        <button onClick={() => irParaCadastro("/cadastro-cliente")} className={style.botao}>
-          Como Cliente
-        </button>
-        <button onClick={() => irParaCadastro("/cadastro-produtor")} className={style.botao}>
-          Como Produtor
-        </button>
+
+        {usuario ? (
+          <div className={style.dadosUsuario}>
+            <p>
+              <strong>Nome:</strong> {usuario.nome}
+            </p>
+            {usuario.cpf && (
+              <p>
+                <strong>CPF:</strong> {usuario.cpf}
+              </p>
+            )}
+            {usuario.cnpj && (
+              <p>
+                <strong>CNPJ:</strong> {usuario.cnpj}
+              </p>
+            )}
+            <p>
+              <strong>Telefone:</strong> {usuario.telefone}
+            </p>
+            <p>
+              <strong>Email:</strong> {usuario.email}
+            </p>
+          </div>
+        ) : (
+          <>
+            <h2>Criar conta</h2>
+            <button
+              onClick={() => irParaCadastro("/cadastro-cliente")}
+              className={style.botao}
+            >
+              Como Cliente
+            </button>
+            <button
+              onClick={() => irParaCadastro("/cadastro-produtor")}
+              className={style.botao}
+            >
+              Como Produtor
+            </button>
+          </>
+        )}
       </div>
     </>
   );

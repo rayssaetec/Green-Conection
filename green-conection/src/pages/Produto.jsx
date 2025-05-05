@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Cabecalho } from "../componentes/cabecalho";
 import { useState } from "react";
+import React from "react";
 import "./produto.css";
 
 const produtos = [

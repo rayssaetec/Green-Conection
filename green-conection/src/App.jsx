@@ -7,6 +7,7 @@ import { ContatarProdutor } from "./pages/ContatarProdutor";
 import { Produtores } from "./pages/Produtores";
 import CadastroCliente from './pages/CadastroCliente';
 import CadastroProdutor from './pages/CadastroProdutor';
+import CadastroSucesso from "./pages/CadastroSucesso";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/produtores" element={<Produtores />} />
         <Route path="/cadastro-cliente" element={<CadastroCliente />} />
         <Route path="/cadastro-produtor" element={<CadastroProdutor />} />
+        <Route path="/cadastro-sucesso" element={<CadastroSucesso />} />
       </Routes>
     </div>
   );
