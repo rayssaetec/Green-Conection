@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useUsuario } from "../context/UsuarioContext";
 import { useCarrinho } from "../context/CarrinhoContext";
 import React from "react";
-import "./produto.css";
+import "./Produto.css";
 
 const produtos = [
   {
