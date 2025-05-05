@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUsuario } from "../context/UsuarioContext";
 import "./cadastro.css";
 
@@ -7,13 +7,13 @@ const CadastroCliente = () => {
   const [form, setForm] = useState({ nome: "", cpf: "", telefone: "", email: "", senha: "" });
   const [erros, setErros] = useState({});
   const navigate = useNavigate();
-  const { setUsuario } = useUsuario();
+  const { cadastrarUsuario } = useUsuario();
 
   const validar = () => {
     const e = {};
-    if (!form.nome.trim()) e.nome = "Nome é obrigatório.";
-    if (!form.cpf.trim()) e.cpf = "CPF é obrigatório.";
-    if (!form.telefone.trim()) e.telefone = "Telefone é obrigatório.";
+    if (!form.nome.trim()) e.nome = "Nome obrigatório.";
+    if (!form.cpf.trim()) e.cpf = "CPF obrigatório.";
+    if (!form.telefone.trim()) e.telefone = "Telefone obrigatório.";
     if (!form.email.includes("@")) e.email = "Email inválido.";
     if (!form.senha || form.senha.length < 6) e.senha = "Mínimo 6 caracteres.";
     setErros(e);
@@ -25,7 +25,7 @@ const CadastroCliente = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validar()) {
-      setUsuario({ ...form, tipo: "cliente" });
+      cadastrarUsuario({ ...form, tipo: "cliente" });
       navigate("/");
     }
   };

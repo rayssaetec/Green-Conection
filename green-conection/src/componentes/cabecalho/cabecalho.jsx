@@ -6,13 +6,28 @@ import style from "./cabecalho.module.css";
 const Cabecalho = () => {
   const [menuAberto, setMenuAberto] = useState(false);
   const navigate = useNavigate();
-  const { usuario } = useUsuario();
+  const { usuario, sair } = useUsuario();
 
   const alternarMenu = () => setMenuAberto(!menuAberto);
-
   const irParaCadastro = (rota) => {
     setMenuAberto(false);
     navigate(rota);
+  };
+
+  const handleSair = () => {
+    if (usuario?.tipo === "cliente") {
+      sair();
+      setMenuAberto(false);
+      navigate("/login-cliente");
+    } else if (usuario?.tipo === "produtor") {
+      sair();
+      setMenuAberto(false);
+      navigate("/login-produtor");
+    } else {
+      sair();
+      setMenuAberto(false);
+      navigate("/");
+    }
   };
 
   return (
@@ -69,6 +84,11 @@ const Cabecalho = () => {
             <p>
               <strong>Email:</strong> {usuario.email}
             </p>
+
+            {/* botão sem fundo */}
+            <button onClick={handleSair} className={style.sair}>
+              Sair
+            </button>
           </div>
         ) : (
           <>

@@ -58,10 +58,12 @@
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s ease;
+  overflow-y: auto;
 }
 
 .menuLateral.ativo {
@@ -118,5 +120,21 @@
 
 .btnFechar:hover {
   opacity: 0.6;
+}
+
+.sair {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-family: monospace;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 }
 

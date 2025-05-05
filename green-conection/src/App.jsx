@@ -5,9 +5,11 @@ import Produto from "./pages/Produto";
 import { Sobre } from "./pages/Sobre";
 import { ContatarProdutor } from "./pages/ContatarProdutor";
 import { Produtores } from "./pages/Produtores";
-import CadastroCliente from './pages/CadastroCliente';
-import CadastroProdutor from './pages/CadastroProdutor';
+import CadastroCliente from "./pages/CadastroCliente";
+import CadastroProdutor from "./pages/CadastroProdutor";
 import CadastroSucesso from "./pages/CadastroSucesso";
+import LoginCliente from './pages/LoginCliente';
+import LoginProdutor from "./pages/LoginProdutor";
 
 import "./App.css";
 
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="/cadastro-cliente" element={<CadastroCliente />} />
         <Route path="/cadastro-produtor" element={<CadastroProdutor />} />
         <Route path="/cadastro-sucesso" element={<CadastroSucesso />} />
+        <Route path="/login-cliente" element={<LoginCliente />} />
+        <Route path="/login-produtor" element={<LoginProdutor />} />
       </Routes>
     </div>
   );
