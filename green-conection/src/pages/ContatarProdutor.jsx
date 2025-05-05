@@ -4,11 +4,6 @@ import styles from "./ContatarProdutor.module.css";
 
 const ContatarProdutor = () => {
   const produtores = [
-    "Fazenda Pereira",
-    "Fazenda São José",
-    "Sítio São Miguel",
-    "Rancho Martinez",
-    "Sítio Rosa Vermelha",
     "Sítio Irmãos Neto",
     "Rancho Ganzarolli",
   ];
